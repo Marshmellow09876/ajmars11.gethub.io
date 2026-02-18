@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Request a Quote - Halo Structural Products">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Quote | Halo Structural Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="display:flex;align-items:center;gap:1rem;">
+    <img src="halosp_banner_logo_final.png" alt="Halo Structural Products Logo" style="width:100px;height:auto;">
+    <h1>Halo Structural Products</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bolts.html">Anchor Bolts</a>
+    <a href="plasma.html">CNC Plasma</a>
+    <a href="about.html">About Us</a>
+    <a href="rfq.html">Request a Quote</a>
+  </nav>
+
+  <main>
+    <h2>Request a Quote (RFQ)</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="type">Project Type:</label><br>
+      <select id="type" name="type">
+        <option value="bolts">Custom Anchor Bolts</option>
+        <option value="plasma">CNC Plasma Cutting</option>
+      </select><br><br>
+
+      <label for="message">Project Dimensions/Details:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+      <input class="btn" type="submit" value="Submit Request">
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2026 Halo Structural Products
+  </footer>
+</body>
+</html>

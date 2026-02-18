@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <rect width="100%" height="100%" fill="#eef8ff" />
+  <text x="20" y="30" font-family="Arial" font-size="20" fill="#0391d8">CNC Plasma (placeholder)</text>
+  <rect x="20" y="50" width="420" height="90" rx="8" ry="8" fill="#dceefb" stroke="#0391d8" />
+  <circle cx="460" cy="95" r="28" fill="#00b4f1" />
+</svg>
