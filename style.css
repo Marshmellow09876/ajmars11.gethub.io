@@ -15,6 +15,12 @@ body {
   line-height: 1.6;
 }
 
+/* Heading Selectors - Consistent across all pages */
+h1 { font-size: 2.5rem; font-weight: bold; margin: 0; }
+h2 { font-size: 2rem; font-weight: bold; margin: 1.5rem 0 1rem 0; }
+h3 { font-size: 1.5rem; font-weight: bold; margin: 1.5rem 0 0.8rem 0; }
+p { font-size: 1rem; margin: 0.8rem 0; }
+
 /* 2. Header/Nav Selectors */
 header { background: var(--secondary); color: white; padding: 1rem; text-align: center; }
 nav { display: flex; justify-content: center; gap: 20px; background: #333; padding: 10px; }
@@ -23,6 +29,7 @@ nav a:hover { color: var(--accent); }
 
 /* 3. Main Content Selector */
 main { padding: 20px; max-width: 1000px; margin: auto; }
+main p { font-size: 1.1rem; line-height: 1.7; }
 
 /* 4. Table Selector (Rubric Requirement) */
 table { width: 100%; border-collapse: collapse; margin: 20px 0; }
@@ -39,8 +46,41 @@ footer { text-align: center; padding: 20px; font-size: 0.8rem; border-top: 1px s
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .card { background: #fff; border: 1px solid rgba(0,0,0,0.06); padding: 1rem; border-radius: 8px; }
 
+/* Carousel Styles */
+.carousel { position: relative; max-width: 100%; margin: 2rem 0; overflow: hidden; border-radius: 8px; }
+.carousel-slide { display: none; width: 100%; animation: fade 1s; }
+.carousel-slide img { width: 100%; height: auto; display: block; }
+.carousel-slide.active { display: block; }
+.fade { animation: fade 1s; }
+
+@keyframes fade { from { opacity: 0.4; } to { opacity: 1; } }
+
+/* Carousel auto-rotation */
+@keyframes carousel-rotation {
+  0% { --slide: 0; }
+  25% { --slide: 1; }
+  50% { --slide: 2; }
+  75% { --slide: 3; }
+  100% { --slide: 0; }
+}
+
+.carousel { animation: carousel-rotation 20s infinite; }
+
+.carousel-slide:nth-child(1) { animation-delay: 0s; }
+.carousel-slide:nth-child(2) { animation-delay: 5s; }
+.carousel-slide:nth-child(3) { animation-delay: 10s; }
+.carousel-slide:nth-child(4) { animation-delay: 15s; }
+
+/* About Page Two-Column Layout */
+.about-container { display: flex; gap: 2rem; align-items: flex-start; }
+.about-content { flex: 1; min-width: 0; }
+.about-image { flex: 0 0 auto; }
+.about-image img { max-width: 100%; height: auto; border-radius: 8px; display: block; }
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   nav { flex-direction: column; gap: 8px; }
   main { padding: 12px; }
+  .about-container { flex-direction: column; gap: 1.5rem; }
+  .about-image { flex: 1 100%; }
 }
